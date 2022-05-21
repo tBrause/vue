@@ -8,11 +8,15 @@
   {{ age > 18 ? "voll" : "nicht voll" }}
   -->
 
+  <!-- v-if (nur true wird gerendert) -->
   <div class="age">
     <span v-if="age < 18">nicht voll</span>
     <span v-else-if="age == 18">voll</span>
     <span v-else>Ü18</span>
   </div>
+
+  <!-- v-show (wird gerendert (display: none)) -->
+  <div v-show="first_name == 'Torste'">hallo T</div>
 </template>
 
 <script>
