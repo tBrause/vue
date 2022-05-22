@@ -1,4 +1,4 @@
-<!-- TEMPLATE ### Ein Item -->
+<!-- TEMPLATE ### TodoListItem -->
 <template>
   <li :class="{ finishedTask: item.finished }">
     <input type="checkbox" v-bind:checked="item.finished" />
@@ -10,6 +10,7 @@
 
 <!-- SCRIPT -->
 <script>
+// EXPORT
 export default {
   name: "TodoListItem",
   data: () => ({

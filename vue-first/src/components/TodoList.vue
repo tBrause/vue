@@ -1,6 +1,5 @@
-<!-- TEMPLATE ### Alle Items -->
+<!-- TEMPLATE ### TodoList -->
 <template>
-  <!-- Array TODOS auslesen mit internem INDEX -->
   <ul>
     <TodoListItem v-for="todo in todos" :key="todo.id" :item="todo" />
   </ul>
@@ -9,8 +8,10 @@
 
 <!-- SCRIPT -->
 <script>
+// IMPORT
 import TodoListItem from "./TodoListItem";
 
+// EXPORT
 export default {
   name: "TodoList",
   data: () => ({
