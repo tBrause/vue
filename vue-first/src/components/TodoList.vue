@@ -1,17 +1,28 @@
 <!-- TEMPLATE ### TodoList -->
 <template>
   <ul>
-    <TodoListItem v-for="todo in todos" :key="todo.id" :item="todo" />
+    <TodoListItem
+      v-for="todo in todos"
+      :key="todo.id"
+      :item="todo"
+      @toogle="toogleListItem"
+    />
   </ul>
 </template>
 <!-- TEMPLATE ENDE -->
 
 <!-- SCRIPT -->
 <script>
-// IMPORT
+/*
+ * IMPORT
+ *
+ */
 import TodoListItem from "./TodoListItem";
 
-// EXPORT
+/*
+ * EXPORT
+ *
+ */
 export default {
   name: "TodoList",
   data: () => ({
@@ -25,10 +36,16 @@ export default {
   components: {
     TodoListItem,
   },
+  methods: {
+    toogleListItem(el) {
+      console.log(el.name);
+      el.finished = !el.finished;
+    },
+  },
 };
 </script>
 <!-- SCRIPT ENDE -->
 
 <!-- STYLE -->
-<style></style>
+<style scoped></style>
 <!-- STYLE ENDE -->
